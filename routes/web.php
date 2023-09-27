@@ -46,6 +46,8 @@ Route::controller(TraditionalWayController::class)->group(function(){
 Route::controller(QueueController::class)->group(function(){
     Route::post('queue-store-user', 'queueStoreUser')->name('queue.store_user');
     Route::get('send-otp', 'sendOtp')->name('send_otp');
+    Route::get('transfer-money', 'transferMoneyForm')->name('transfer_money_form');
+    Route::post('transfer-money', 'storeTransferMoney')->name('store_transfer_money');
 });
 
 
